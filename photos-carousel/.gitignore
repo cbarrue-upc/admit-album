@@ -1,0 +1,15 @@
+node_modules
+.pnpm-store
+.dist
+build
+coverage
+.DS_Store
+.env
+.env.*
+pnpm-lock.yaml
+apps/web/dist
+apps/server/dist
+apps/web/.turbo
+apps/web/.vite
+apps/web/node_modules
+apps/server/node_modules

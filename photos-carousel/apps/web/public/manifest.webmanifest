@@ -1,0 +1,16 @@
+{
+  "name": "Google Photos Carousel",
+  "short_name": "Carousel",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
