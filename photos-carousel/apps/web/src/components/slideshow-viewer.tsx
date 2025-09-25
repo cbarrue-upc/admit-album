@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
+
 import type { MediaItem } from '@photos-carousel/types';
 import { useSlideshowStore } from '../store/slideshow.js';
 import { useMediaContent } from '../hooks/useMediaContent.js';
@@ -18,6 +19,7 @@ export function SlideshowViewer({ items }: SlideshowViewerProps) {
   const togglePlay = useSlideshowStore((state) => state.togglePlay);
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
+
   const [lastTap, setLastTap] = useState(0);
   const currentItem = useMemo(() => items[currentIndex], [items, currentIndex]);
   const { url, loading, error } = useMediaContent(currentItem);
@@ -66,6 +68,7 @@ export function SlideshowViewer({ items }: SlideshowViewerProps) {
       setScale((value) => (value > 1.05 ? 1 : 1.6));
     } else {
       toggleHud();
+
     }
     setLastTap(now);
   };
@@ -73,6 +76,7 @@ export function SlideshowViewer({ items }: SlideshowViewerProps) {
   return (
     <div
       ref={containerRef}
+
       className="relative flex h-full w-full items-center justify-center overflow-hidden bg-black"
       onClick={handleTap}
       onKeyDown={(event) => {
@@ -97,6 +101,7 @@ export function SlideshowViewer({ items }: SlideshowViewerProps) {
           alt={currentItem?.id ?? 'Imagen'}
           className="max-h-full max-w-full rounded-xl shadow-2xl transition-transform duration-200"
           style={{ transform: `scale(${scale})` }}
+
         />
       )}
     </div>
@@ -106,3 +111,4 @@ export function SlideshowViewer({ items }: SlideshowViewerProps) {
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
+
