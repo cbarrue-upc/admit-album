@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@google-cloud/local-auth": "^2.4.0",
-    "@modelcontextprotocol/sdk": "^0.1.0",
+
+    "@modelcontextprotocol/sdk": "^1.18.1",
+
     "@photos-carousel/types": "workspace:^",
     "axios": "^1.6.7",
     "cors": "^2.8.5",
