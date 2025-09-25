@@ -13,10 +13,8 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
-
     "@google-cloud/local-auth": "^3.0.1",
     "@modelcontextprotocol/sdk": "^1.18.1",
-
     "@photos-carousel/types": "workspace:^",
     "axios": "^1.6.7",
     "cors": "^2.8.5",
